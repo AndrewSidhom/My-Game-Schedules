@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teams</title>
+    </head>
+    <body>
+   <!--NavBar links to other pages-->
+  <div class="topnav">
+  <a href="http://localhost:5000/welcome">Home</a>
+  <a href="http://localhost:5000/myteams">Add a Team</a>
+  <a href="http://localhost:5000/deleteteam">Remove a Team</a>
+  <a href="http://localhost:5000/logout">Log Out</a>
+  </div>
+
+  
+ <!-- Displays Json array data in a loop-->  
+ <br>
+{% for item in req_data %}
+<table> 
+<tr><td>Date & Time: </td><td> {{ item["Date & time"] }} </td></tr>
+<tr><td>Team 1: </td><td> {{ item["Team 1"] }} </td><td>Ranking: </td><td> {{ item["Team 1's ranking"] }} </td></tr>
+<tr><td>Team 2: </td><td> {{ item["Team 2"] }} </td><td>Ranking: </td><td> {{ item["Team 2's ranking"] }} </td></tr>
+<tr><td><br></td></tr>
+</table>
+{% endfor %}
+
+<br><br>
+<div> <form action="/welcome" method="post">
+      <input type="submit" value="Refresh Data" id="submit">
+      </form>
+  </div>
+</body>
+</html>

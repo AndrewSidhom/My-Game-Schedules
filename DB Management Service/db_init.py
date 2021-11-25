@@ -1,0 +1,27 @@
+from app import db, Team
+
+
+def main():
+    db.create_all()
+    team1 = Team(id=64, name='Liverpool')
+    team2 = Team(id=65, name='Man City')
+    team3 = Team(id=73, name='Tottenham')
+    team4 = Team(id=57, name='Arsenal')
+    team5 = Team(id=66, name='Man United')
+    team6 = Team(id=61, name='Chelsea')
+    team7 = Team(id=76, name='Wolverhampton')
+    team8 = Team(id=346, name='Watford')
+    team9 = Team(id=563, name='West Ham')
+    team10 = Team(id=338, name='Leicester City')
+    team11 = Team(id=62, name='Everton')
+    team12 = Team(id=1044, name='Bournemouth')
+    team13 = Team(id=67, name='Newcastle')
+    team14 = Team(id=354, name='Crystal Palace')
+    team15 = Team(id=397, name='Brighton Hove')
+    team16 = Team(id=340, name='Southampton')
+    team17 = Team(id=328, name='Burnley')
+    team18 = Team(id=715, name='Cardiff')
+    team19 = Team(id=63, name='Fulham')
+    team20 = Team(id=394, name='Huddersfield')
+    db.session.add_all([team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15, team16, team17, team18, team19, team20])
+    db.session.commit()
